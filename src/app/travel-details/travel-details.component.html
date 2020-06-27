@@ -1,0 +1,51 @@
+<hero></hero>
+<h2 class="container my-5">Travel Details</h2>
+
+
+
+<div class="container-fluid col-12 d-flex flex-wrap justify-content-between mx-auto my-5">
+	<div class="h5 col-lg-6 col-md-6 flex-column col-sm-12 rounded d-flex justify-content-center">
+		<h3>{{ travel.name }}</h3>
+		<h4>{{ travel.description }}</h4>
+		<h3>Start Date {{ travel.startDate }}</h3>
+		<h3>Duration {{ travel.duration }}</h3>
+		<h4 class="text-danger">for only € {{ travel.price }}.-</h4>
+		<button class="btn btn-secondary"(click)="onAddToCart(travel)">book</button>
+	</div>
+
+	<div class="image col-lg-6 col-md-6 col-sm-12">
+		<img class="rounded" src="{{ travel.image }}" alt="Destination">
+	</div>
+
+</div>
+
+
+<div class="container col-10">
+		<div clsss="row">
+		<form class=" m-0 p-0 col-12" [formGroup]="checkoutForm" (ngSubmit)="addComment()">
+			<div class="form-group mb-3">
+				<div class="form-group col-12 pl-0">
+					<label for="exampleFormControlTextarea1">Example textarea</label>
+					<textarea formControlName="commentValue" class="form-control col-6" id="exampleFormControlTextarea1" rows="3"></textarea>
+				</div>
+				<input formControlName="commentName" type="text" class="form-control col-6" placeholder="Your name" aria-label="Recipient's username">
+			</div>
+			<div>
+				<button class="btn btn-outline-secondary" type="submit">Post Comment</button>
+			</div>
+		</form>
+
+	<div *ngFor="let comment of travel.travelComment; index as commentId">		
+
+
+				<div class="my-5 col-12 border border-warning mb-2">
+					<div class="h4">{{comment.commentValue}}</div>
+					<div class="h5">{{comment.commentName}}</div>
+					<div class="">{{comment.commentDate}}</div>
+					<button class="btn btn-primary mb-5"(click)="editComment(commentId)">edit</button>
+					<button class="btn btn-danger ml-5 mb-5"(click)="deleteComment(commentId)">delete</button>
+				</div>
+
+		</div>
+	</div>
+	</div>

@@ -1,0 +1,26 @@
+<div class="container my-5">
+	<table class="table table-stripped">
+		<thead class="thead-dark">
+		  <tr class="row">
+			<th class="col-lg-2">Article</th>
+			<th class="col-lg-8">Description</th>
+			<th class="col-lg-2">Price</th>
+		  </tr>
+		</thead>
+		<tbody>
+			<tr class="row" *ngFor="let cartTravel of cartTravels; index as travelID">
+				<td class="col-lg-2"><img class="p-0 w-100" src="{{cartTravel.image}}" alt="{{cartTravel.name}}"></td>
+				<td class="col-lg-8">{{cartTravel.description}}<br>{{cartTravel.duration}}<br>Date: {{cartTravel.startDate}}</td>
+				<td class="col-lg-2">€ {{cartTravel.price}}<button class="ml-5 btn btn-danger btn-small"(click)="onDeleteTravel(travelID)">delete</button></td>
+							  </tr>
+		</tbody>
+		<tfoot>
+			<tr class="row h3">
+				<td class="col-lg-8">{{totalPrice}}</td>
+				<td class="col-lg-4">{{fullPrice}}</td>
+			</tr>
+		</tfoot>
+	  </table>
+	  <button class="ml-5 btn btn-danger col-4"(click)="onBookTravels()">Book!</button>
+</div>
+

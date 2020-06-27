@@ -1,0 +1,19 @@
+<hero></hero>
+
+<div class="container-fluid mt-2 mb-5">
+	<h1>Experience our Offers</h1>
+	<div class="row d-flex justify-content-around">
+		<div class="card justify-content-between bg-light m-5 travel-wrapper col-xl-3 col-lg-4 col-md-6 col-sm-12" *ngFor="let travel of myTravel; index as travelID">
+			<h3 class="">{{travel.name}}</h3>
+			<h5 class="">{{travel.description}}</h5>
+			<h5 class="">{{travel.startDate}}</h5>
+			<h5 class="">{{travel.duration}}</h5>
+			<a [routerLink] ="['/travels', travelID]">
+				<img src="{{travel.image}}" alt="Destination Image">
+			</a>
+			<a class="btn btn-outline-secondary btn-sm mb-3" [routerLink]="['/travels', travelID]" role="button">Book now!</a>
+		</div>
+	</div>
+</div>
+
+
