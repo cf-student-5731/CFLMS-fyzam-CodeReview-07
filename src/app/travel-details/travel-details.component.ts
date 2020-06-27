@@ -61,7 +61,7 @@ export class TravelDetailsComponent implements OnInit {
 		}
 		else{
 			Swal.fire(
-				"You have to enter your mssage and your name!"
+				"You have to enter your message and your name!"
 			  )
 		}
 	}
