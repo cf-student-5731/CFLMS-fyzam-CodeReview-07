@@ -8,7 +8,7 @@ export const travels = [
 		image: './assets/img/miami.jpg',
 		travelComment: [
 			{
-				commentValue: 'I had a wonderful tims, the beaches are awesome',
+				commentValue: 'I had a wonderful time, the beaches are awesome',
 				commentName: 'Tronald Dump',
 				commentDate: 'Saturday, June 20, 2020, 13:14:04'
 		},
@@ -53,9 +53,9 @@ export const travels = [
 				commentDate: 'Monday, February 10, 2020, 16:33:09'
 		},
 			{
-				commentValue: 'Very nice trip, but expensive',
-				commentName: 'John Meyers',
-				commentDate: 'Saturday, June 13, 2020, 16:22:09'
+				commentValue: 'Very nice trip, and cheep',
+				commentName: 'Hubert Farnsworth',
+				commentDate: 'Friday, June 12, 2020, 05:59:05'
 			}
 		]
 	},
